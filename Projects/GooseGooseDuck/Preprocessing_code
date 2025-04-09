@@ -19,5 +19,5 @@ def Preprocessing_code(path_to_imgs):
 
 Example of use
 
-Preprocessing_code(path)
+classes, x, y = Preprocessing_code(path)
 
