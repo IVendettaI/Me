@@ -1,15 +1,21 @@
 Varuzhan Khachatryan Araevich
-Contacts
-hacatranvaruzan9@gmail.com
 
-Junior ML Engineer, Data Scientist, NLP engineer
+gmail: hacatranvaruzan9@gmail.com
+
+telegram: @IDiluculumI
+
+Target — Junior ML Engineer, Data Scientist, NLP engineer
 
 Skils:
-Python:
-NumPy, Pandas, Scikit-learn, TensorFlow, Matplotlib
-ML:
-Supervised/Unsupervised learning, Feature engineering, Model tuning (GridSearch, Optuna), Cross-validation, Clustering, Time Series, NLP, Computer Vision
 
-learning:
+Python:
+
+NumPy, Pandas, Scikit-learn, TensorFlow, Matplotlib
+
+ML:
+
+Supervised/Unsupervised learning, Feature engineering
+
+Studying:
 SQL, Bash, linux
 
