@@ -19,5 +19,22 @@ def Preprocessing_code(path_to_imgs):
 
 Example of use
 
-classes, x, y = Preprocessing_code(path)
+classesX, images, y = Preprocessing_code(path)
 
+def img_chek()
+    plt.figure(figsize = (12,15))
+    for i in range(100):
+        ind = np.random.randint(0,len(x) + )
+        plt.subplot(10,10,i + 1)
+        plt.title(classesX[y[ind]])
+        plt.imshow(images[ind])
+        plt.xticks([])
+        plt.yticks([])
+
+
+model = keras.models.load_model("my_model.keras")
+
+p = model.pred(x)
+
+for i in p:
+    print(f'class: {np.argmax(i)} — {d[np.argmax(i)]}\nModel confidence: {max(i) * 100}%')
