@@ -20,3 +20,8 @@ Example:
 
 ![изображение](https://github.com/user-attachments/assets/73f77c01-dd87-40bd-8c70-5468771588c0)
 
+3.Now you need to load the model, in the code there is a function for_keras and for_PyTorch
+
+The model can recognize not only ducks and geese, but also ducklings and goslings, and can also recognize drawings and rubber ducks.
+
+you can chek it with samples in folder Samples
