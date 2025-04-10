@@ -8,7 +8,7 @@ instruction:
 
 1. Preprocessing
 
-Let's say you have a photo "img" you need to use code in file "Preprocessing_code" below to preprocess the image. This code works with paths to root folders where images are stored.
+Let's say you have a photo "img" you need to use  in file "code" below to preprocess the image. This code works with paths to root folders where images are stored.
 
 2. Checking the correctness
 
