@@ -22,6 +22,10 @@ Example:
 
 3.Now you need to load the model, in the code there is a function for_keras
 
+link for install
+
+https://drive.google.com/file/d/1lIyBJcuJTMQL_1jvVfGHNC3l5HiHk9vm/view?usp=drive_link
+
 use file my_model.keras for this
 
 The model can recognize not only ducks and geese, but also ducklings and goslings, and can also recognize drawings and rubber ducks.
