@@ -1,5 +1,3 @@
-import torch
-from torchvision import transforms
 from PIL import Image
 import os # to work with the file system
 import numpy as np
@@ -48,15 +46,3 @@ def for_keras(x):
     p = model.pred(x)
     for i in p:
         print(f'class: {np.argmax(i)} — {d[np.argmax(i)]}\nModel confidence: {max(i) * 100}%')
-
-def for_PyTorch():
-    model = torch.load("my_model.pth")
-    model.eval()
-
-    with torch.no_grad():
-        predictions = model(x)
-
-    for i in range(len(predictions)):
-        probs = torch.nn.functional.softmax(predictions[i], dim=0)
-        pred_class = torch.argmax(probs).item()
-        print(f'class: {pred_class} — {all_classes[pred_class]}\nModel confidence: {probs[pred_class] * 100:.2f}%')
