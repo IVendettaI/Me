@@ -1,3 +1,14 @@
+import torch
+from torchvision import transforms
+from PIL import Image
+import os # to work with the file system
+import numpy as np
+import cv2 # to read and process images
+import tensorflow as tf # to load the model and preprocess images
+from tensorflow import keras
+import matplotlib.pyplot as plt # to display images
+from tqdm import tqdm # to display file processing progress
+
 Use backslash for path
 
 def Preprocessing_code(path_to_imgs):
@@ -32,9 +43,24 @@ def img_chek()
         plt.yticks([])
 
 
+for Keras:
+
 model = keras.models.load_model("my_model.keras")
 
 p = model.pred(x)
 
 for i in p:
     print(f'class: {np.argmax(i)} — {d[np.argmax(i)]}\nModel confidence: {max(i) * 100}%')
+
+For PyTorch
+
+model = torch.load("my_model.pth")
+model.eval()
+
+with torch.no_grad():
+    predictions = model(x)
+
+for i in range(len(predictions)):
+    probs = torch.nn.functional.softmax(predictions[i], dim=0)
+    pred_class = torch.argmax(probs).item()
+    print(f'class: {pred_class} — {all_classes[pred_class]}\nModel confidence: {probs[pred_class] * 100:.2f}%')
