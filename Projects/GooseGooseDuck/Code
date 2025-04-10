@@ -43,24 +43,20 @@ def img_chek()
         plt.yticks([])
 
 
-for Keras:
+def for_keras(x):
+    model = keras.models.load_model("my_model.keras")
+    p = model.pred(x)
+    for i in p:
+        print(f'class: {np.argmax(i)} — {d[np.argmax(i)]}\nModel confidence: {max(i) * 100}%')
 
-model = keras.models.load_model("my_model.keras")
+def for_PyTorch():
+    model = torch.load("my_model.pth")
+    model.eval()
 
-p = model.pred(x)
+    with torch.no_grad():
+        predictions = model(x)
 
-for i in p:
-    print(f'class: {np.argmax(i)} — {d[np.argmax(i)]}\nModel confidence: {max(i) * 100}%')
-
-For PyTorch
-
-model = torch.load("my_model.pth")
-model.eval()
-
-with torch.no_grad():
-    predictions = model(x)
-
-for i in range(len(predictions)):
-    probs = torch.nn.functional.softmax(predictions[i], dim=0)
-    pred_class = torch.argmax(probs).item()
-    print(f'class: {pred_class} — {all_classes[pred_class]}\nModel confidence: {probs[pred_class] * 100:.2f}%')
+    for i in range(len(predictions)):
+        probs = torch.nn.functional.softmax(predictions[i], dim=0)
+        pred_class = torch.argmax(probs).item()
+        print(f'class: {pred_class} — {all_classes[pred_class]}\nModel confidence: {probs[pred_class] * 100:.2f}%')
