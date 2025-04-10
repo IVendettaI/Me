@@ -6,13 +6,15 @@ Duck - 0
 
 instruction:
 
+Now we work with file Code
+
 1. Preprocessing
 
-Let's say you have a photo "img" you need to use  in file "code" below to preprocess the image. This code works with paths to root folders where images are stored.
+Let's say you have a photo "img" you need to use Preprocessing_code() function below to preprocess the image. This code works with paths to root folders where images are stored. We need images 299х299
 
 2. Checking the correctness
 
-Afterwards you can use the code in img_check to check if the images are processed correctly.
+Afterwards you can use img_check function to check if the images are processed correctly.
 
 Example:
 
